@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sneaker Company</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 16px; /* Increased padding */
+      text-decoration: none;
+      transition: background-color 0.3s ease; /* Smooth transition */
+    }
+    .navbar a:hover {
+      background-color: #555; /* Darker background on hover */
+    }
+    .content {
+      padding-top: 80px;
+      text-align: center;
+      color: #fff;
+      height: 100%;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+    .animation {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #video-background {
+      margin: auto;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+    /* Add smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div id="home" class="content">
+  <div class="animation">
+    <video autoplay muted loop id="video-background" playsinline>
+      <source src="Fi.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<div id="about" class="content">
+  <h1>About Us</h1>
+  <p>This is the about section. Add your about content here.</p>
+</div>
+
+<div id="products" class="content">
+  <h1>Our Products</h1>
+  <p>This is the products section. Add your products content here.</p>
+</div>
+
+<div id="contact" class="content">
+  <h1>Contact Us</h1>
+  <p>This is the contact section. Add your contact information here.</p>
+</div>
+
+</body>
+</html>
