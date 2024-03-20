@@ -1,103 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sneaker Company</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow-x: hidden;
-      font-family: Arial, sans-serif;
-    }
-    .navbar {
-      overflow: hidden;
-      background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-    }
-    .navbar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 20px 16px; /* Increased padding */
-      text-decoration: none;
-      transition: background-color 0.3s ease; /* Smooth transition */
-    }
-    .navbar a:hover {
-      background-color: #555; /* Darker background on hover */
-    }
-    .content {
-      padding-top: 80px;
-      text-align: center;
-      color: #fff;
-      height: 100%;
-    }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
-    }
-    .animation {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-    #video-background {
-      margin: auto;
-      display: block;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -1;
-    }
-    /* Add smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flicks Sneaker Brand</title>
+  <link rel="icon" href="./img/Flicks-icon.png">
 </head>
 <body>
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#products">Products</a>
-  <a href="#contact">Contact</a>
-</div>
+  <style>
+    section nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 8px rgba(0,0,0,0.6);
+      background: white;
+      position: sticky; /* Changed to sticky */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 20px;
+      height: 60px;
+    }
 
-<div id="home" class="content">
-  <div class="animation">
-    <video autoplay muted loop id="video-background" playsinline>
-      <source src="Fi.mp4" type="video/mp4">
-    </video>
+    section nav .logo img {
+      max-height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    section nav .logo {
+      font-size: 20px;
+      color: #c72092;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+
+    section nav .logo span {
+      color: #6c14d0;
+      text-decoration: none;
+    }
+
+    section nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    section nav .logo h1 {
+      font-size: 20px;
+      margin: 0;
+      display: inline;
+    }
+
+    section nav ul li {
+      display: inline-block;
+      margin: 5px 15px;
+    }
+
+    section nav ul li a {
+      text-decoration: none;
+      color: black;
+      transition: transform 0.3s ease; /* Added transition */
+      display: inline-block; /* Added display property */
+    }
+
+    section nav ul li a:hover {
+      color: #c7204d;
+      transform: scale(1.2); /* Scale on hover */
+    }
+
+    .login-button {
+      margin-right: 10px;
+    }
+
+    .login-button a {
+      text-decoration: none;
+      color: black;
+      padding: 8px 15px;
+      border: 1px solid #c72092;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .login-button a:hover {
+      background-color:#c7204d;
+      color: white;
+    }
+
+    .content {
+      padding-top: 80px; /* Adjusted to accommodate the fixed navigation bar */
+    }
+
+    .video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-color: #f2f2f2; /* Example background color */
+}
+
+.video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+  </style>
+  <section>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img class="img-responsive2" src="img/Flicks-icon.png" alt="Flicks-icon"></a>
+        <h1><span style="color: #6c14d0;">Flick</span><span style="color: #c72092;">s</span></h1>
+      </div>
+
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Products">Products</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Review">Review</a></li>
+        <li><a href="#Services">Services</a></li>
+      </ul>
+
+      <div class="login-button">
+        <a href="#Login">Login</a>
+      </div>
+    </nav>
+  </section>
+
+  <div class="content">
+    <div class="video">
+      <video autoplay muted loop id="video-background" playsinline>
+        <source src="FlicksIntro.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="text-content">
+      <!-- Add your text content here -->
+    </div>
   </div>
-</div>
-
-<div id="about" class="content">
-  <h1>About Us</h1>
-  <p>This is the about section. Add your about content here.</p>
-</div>
-
-<div id="products" class="content">
-  <h1>Our Products</h1>
-  <p>This is the products section. Add your products content here.</p>
-</div>
-
-<div id="contact" class="content">
-  <h1>Contact Us</h1>
-  <p>This is the contact section. Add your contact information here.</p>
-</div>
-
 </body>
 </html>
