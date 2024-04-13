@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Flicks Login</title>
+  <link rel="icon" href="./img/Flicks-icon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
@@ -29,7 +30,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      animation: background-swap 60s infinite;
+      animation: background-swap 30s infinite;
       background-clip: text;
       background-image: url("./img/blank.jpg");
       background-position: center;
@@ -156,6 +157,12 @@ button[type="submit"]:hover {
   color: #666; /* Lighter color for better readability */
   margin-bottom: 15px; /* Adjust margin as needed */
 }
+    a{
+      color: #000;
+      text-decoration: none;
+      margin-top: 10px;
+      display: block;
+    }
   </style>
 
   <div class="container">
@@ -167,8 +174,8 @@ button[type="submit"]:hover {
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       <button type="submit">Log In</button>
+      <p>Don't have an account? <a href="register.html">Sign Up</a></p>
     </form>
-    <p id="message"></p>
   </div>  
 
   <div class="social-proof">
